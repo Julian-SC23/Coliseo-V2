@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Boletos</title>
+    <link rel="stylesheet" href="../Estilos/estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor barra">
+            <a href="index.html" class="logo">COLISEO<span>CENTENARIO</span></a>
+            <input type="checkbox" id="menu-casilla" class="menu-casilla">
+            <label for="menu-casilla" class="menu-boton" aria-label="Abrir menú">☰</label>
+
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="cartelera.html">Cartelera</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="MisBoletos.html" class="activo">Mis boletos</a>
+                <a href="Iniciar.html">Iniciar sesión</a>
+                <a href="registro.html" class="boton-menu">Crear cuenta</a>
+            </nav>
+        </div>
+
+    </header>
+    <main class="seccion">
+        <div class="contenedor">
+            
+            <h1 class="seccion-titulo">Mis boletos</h1>
+            <p class="seccion-subtitulo">Aquí aparecen todos los boletos que has comprado.</p>
+            
+            <!-- Boleto 1 -->
+            <article class="boleto">
+            <img src="../Recursos/rococo.jpg" alt="Cartel de Panteón Rococó · 30 años" class="boleto-imagen">
+                
+            <div class="boleto-info">
+                <h2 class="boleto-titulo">Panteón Rococó · 30 años</h2>
+                <p>29 Oct 2026 · Coliseo Centenario, Torreón</p>
+                <p>Zona Preferente · Fila C, Lugar 12</p>
+                <p>$650 MXN</p>
+            </div>
+            
+            <div class="boleto-lateral">
+                <p class="boleto-id">ID: CC-000123-01</p>
+                <a href="#" class="boton">Descargar</a>
+            </div>
+        </article>
+        <!-- Boleto 2 -->
+        <article class="boleto">
+            <img src="../Recursos/enjambre.jpg" alt="Cartel de Enjambre" class="boleto-imagen">
+            
+            <div class="boleto-info">
+                <h2 class="boleto-titulo">Enjambre</h2>
+                <p>19 Nov 2026 · Coliseo Centenario, Torreón</p>
+                <p>Zona VIP · Acceso general</p>
+                <p>$1,200 MXN</p>
+            </div>
+            
+            <div class="boleto-lateral">
+                <p class="boleto-id">ID: CC-000098-01</p>
+                <a href="#" class="boton">Descargar</a>
+            </div>
+        </article>
+        
+        </div>
+    </main>
+</body>
+</html>

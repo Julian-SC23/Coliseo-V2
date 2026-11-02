@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta | Coliseo Centenario</title>
+    <link rel="stylesheet" href="../Estilos/estilos.css">
+</head>
+<body>
+    <!-- =============== MENÚ ============================ -->
+    <header class="encabezado">
+        <div class="contenedor barra">
+            <a href="index.html" class="logo">COLISEO<span>CENTENARIO</span></a>
+            <input type="checkbox" id="menu-casilla" class="menu-casilla">
+            <label for="menu-casilla" class="menu-boton" aria-label="Abrir menú">☰</label>
+
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="cartelera.html">Cartelera</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="MisBoletos.html">Mis boletos</a>
+                <a href="Iniciar.html">Iniciar sesión</a>
+                <a href="registro.html" class="boton-menu">Crear cuenta</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor pagina-centrada">
+
+        <form class="formulario formulario-ancho" action="#" method="post">
+            <h1 class="formulario-titulo">Crear cuenta</h1>
+            <p class="formulario-subtitulo">Elige el tipo de cuenta que necesitas y llena tus datos.</p>
+
+            <!-- Tipo de cuenta (los 3 radios van primero para poder mostrar/ocultar con CSS) -->
+            <input class="tipo-radio" type="radio" id="tipo-asistente" name="tipo" value="asistente" checked>
+            <input class="tipo-radio" type="radio" id="tipo-organizador" name="tipo" value="organizador">
+            <input class="tipo-radio" type="radio" id="tipo-administrador" name="tipo" value="administrador">
+
+            <div class="tipos-cuenta">
+                <label class="tipo-tarjeta" for="tipo-asistente">
+                    <strong>Asistente</strong>
+                    <span>Compra boletos y guárdalos</span>
+                </label>
+                <label class="tipo-tarjeta" for="tipo-organizador">
+                    <strong>Organizador</strong>
+                    <span>Publica y gestiona tus eventos</span>
+                </label>
+                <label class="tipo-tarjeta" for="tipo-administrador">
+                    <strong>Administrador</strong>
+                    <span>Personal del Coliseo</span>
+                </label>
+            </div>
+
+            <!-- Datos comunes -->
+            <div class="campo">
+                <label class="campo-etiqueta" for="nombre">Nombre completo</label>
+                <input class="campo-entrada" type="text" id="nombre" name="nombre"
+                placeholder="Nombre como en INE" autocomplete="name" required>
+            </div>
+
+            <div class="campo">
+                <label class="campo-etiqueta" for="correo">Correo electrónico</label>
+                <input class="campo-entrada" type="email" id="correo" name="correo"
+                placeholder="tucorreo@ejemplo.com" autocomplete="email" required>
+            </div>
+
+            <div class="campo">
+                <label class="campo-etiqueta" for="telefono">
+                Teléfono <span class="campo-opcional">(opcional)</span>
+                </label>
+                <input class="campo-entrada" type="tel" id="telefono" name="telefono"
+                placeholder="87 00 00 00 00" autocomplete="tel">
+            </div>
+
+            <!-- Datos extra según el tipo de cuenta -->
+            <div class="extra extra-asistente">
+                <h2 class="extra-titulo">Datos de asistente</h2>
+                <div class="campo">
+                    <label class="campo-etiqueta" for="institucion">Institución o empresa <span class="campo-opcional">(opcional)</span></label>
+                    <input class="campo-entrada" type="text" id="institucion" name="institucion" placeholder="Instituto Tecnológico de la Laguna">
+                </div>
+                <div class="campo">
+                    <label class="campo-etiqueta" for="asistencia">Tipo de asistencia</label>
+                    <select class="campo-entrada" id="asistencia" name="asistencia">
+                        <option value="">Selecciona una opción</option>
+                        <option value="Presencial">Presencial</option>
+                        <option value="Virtual">Virtual (transmisión en línea)</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label class="campo-etiqueta" for="ciudad">Ciudad</label>
+                    <input class="campo-entrada" type="text" id="ciudad" name="ciudad" placeholder="Torreón, Coahuila" >
+                </div>
+            </div>
+
+            <div class="extra extra-organizador">
+                <h2 class="extra-titulo">Datos de organizador</h2>
+                <div class="campo">
+                    <label class="campo-etiqueta" for="titulo">Título del evento</label>
+                    <input class="campo-entrada" type="text" id="titulo" name="titulo" placeholder="Nombre del evento que quieres publicar">
+                </div>
+                <div class="campo">
+                    <label class="campo-etiqueta" for="resumen">Resumen del evento</label>
+                    <textarea class="campo-entrada" id="resumen" name="resumen" rows="4" placeholder="Describe brevemente tu evento"></textarea>
+                </div>
+                <div class="campo">
+                    <label class="campo-etiqueta" for="area">Área temática</label>
+                    <select class="campo-entrada" id="area" name="area-tematica">
+                        <option value="">Selecciona una opción</option>
+                        <option value="Música">Música</option>
+                        <option value="Deportes">Deportes</option>
+                        <option value="Cultura y espectáculos">Cultura y espectáculos</option>
+                        <option value="Familiar">Familiar</option>
+                        <option value="Conferencias y negocios">Conferencias y negocios</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label class="campo-etiqueta" for="productora">Nombre de tu productora o empresa</label>
+                    <input class="campo-entrada" type="text" id="productora" name="productora" placeholder="Producciones Laguna" >
+                </div>
+                <div class="campo">
+                    <label class="campo-etiqueta" for="tipo-eventos">Tipo de eventos que organizas</label>
+                    <select class="campo-entrada" id="tipo-eventos" name="tipo-eventos">
+                        <option value="">Selecciona una opción</option>
+                        <option value="Conciertos">Conciertos</option>
+                        <option value="Lucha libre">Lucha libre</option>
+                        <option value="Deportivos">Deportivos</option>
+                        <option value="Familiares">Familiares</option>
+                        <option value="Conferencias">Conferencias</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="extra extra-administrador">
+                <h2 class="extra-titulo">Datos de administrador</h2>
+                <div class="campo">
+                    <label class="campo-etiqueta" for="empleado">Número de empleado</label>
+                    <input class="campo-entrada" type="text" id="empleado" name="empleado" placeholder="Ej. 00123" >
+                </div>
+                <div class="campo">
+                    <label class="campo-etiqueta" for="area-admin">Área</label>
+                    <select class="campo-entrada" id="area-admin" name="area">
+                        <option value="">Selecciona una opción</option>
+                        <option value="Taquillas">Taquillas</option>
+                        <option value="Operaciones">Operaciones</option>
+                        <option value="Sistemas">Sistemas</option>
+                        <option value="Dirección">Dirección</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label class="campo-etiqueta" for="codigo">Código de autorización</label>
+                    <input class="campo-entrada" type="password" id="codigo" name="codigo" placeholder="Código que te dio el Coliseo" autocomplete="off">
+                </div>
+            </div>
+
+            <!-- Contraseña -->
+            <div class="campo">
+                <label class="campo-etiqueta" for="clave">Contraseña</label>
+                <input class="campo-entrada" type="password" id="clave" name="clave"
+                placeholder="Mínimo 8 caracteres" minlength="8" autocomplete="new-password" required>
+            </div>
+
+            <div class="campo">
+                <label class="campo-etiqueta" for="clave2">Confirmar contraseña</label>
+                <input class="campo-entrada" type="password" id="clave2" name="clave2"
+                placeholder="Repite tu contraseña" minlength="8" autocomplete="new-password" required>
+            </div>
+
+            <label class="formulario-terminos">
+                <input class="formulario-casilla" type="checkbox" name="terminos" required>
+                <span>Acepto los <a href="#" class="formulario-enlace">términos y condiciones</a> y el aviso de privacidad.</span>
+            </label>
+
+            <button type="submit" class="boton boton-completo">Crear cuenta</button>
+
+            <p class="formulario-pie">¿Ya tienes cuenta?
+                <a href="Iniciar.html" class="formulario-enlace">Iniciar sesión</a>
+            </p>
+        </form>
+
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor pie-contenido">
+            <p class="pie-logo">COLISEO<span>CENTENARIO</span></p>
+            <nav class="pie-enlaces">
+            <a href="index.html">Inicio</a>
+            <a href="cartelera.html">Cartelera</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="pagos.html">Pagos</a>
+            <a href="MisBoletos.html">Mis boletos</a>
+        </nav>
+        </div>
+        <p class="pie-copy">© 2026 Coliseo Centenario. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

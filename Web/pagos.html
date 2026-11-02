@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagos | Coliseo Centenario</title>
+    <link rel="stylesheet" href="../Estilos/estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor barra">
+            <a href="index.html" class="logo">COLISEO<span>CENTENARIO</span></a>
+            <input type="checkbox" id="menu-casilla" class="menu-casilla">
+            <label for="menu-casilla" class="menu-boton" aria-label="Abrir menú">☰</label>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="cartelera.html">Cartelera</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="MisBoletos.html">Mis boletos</a>
+                <a href="Iniciar.html">Iniciar sesión</a>
+                <a href="registro.html" class="boton-menu">Crear cuenta</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="seccion">
+        <div class="contenedor">
+            <h1 class="seccion-titulo">Pagos</h1>
+            <p class="seccion-subtitulo">El precio depende del tipo de cuenta. El pago es solo una demostración y funcionará después de la unidad de PHP.</p>
+
+            <div class="rejilla">
+                <article class="evento">
+                    <div class="evento-info">
+                        <h3 class="evento-titulo">Asistente</h3>
+                        <p class="evento-dato">Compra de boletos para los eventos del Coliseo.</p>
+                        <p class="evento-precio">Desde $250 MXN por boleto</p>
+                        <a href="#"><img src="../Recursos/paypal.svg" alt="Pagar con PayPal" class="paypal"></a>
+                    </div>
+                </article>
+
+                <article class="evento">
+                    <div class="evento-info">
+                        <h3 class="evento-titulo">Organizador</h3>
+                        <p class="evento-dato">Cuota por publicar y gestionar tu evento.</p>
+                        <p class="evento-precio">$2,500 MXN por evento</p>
+                        <a href="#"><img src="../Recursos/paypal.svg" alt="Pagar con PayPal" class="paypal"></a>
+                    </div>
+                </article>
+            </div>
+
+            <h2 class="seccion-titulo pagos-subtitulo">Confirmación de pago (simulada)</h2>
+            <div class="compra-caja">
+                <p>Así se verá tu confirmación cuando el pago funcione:</p>
+                <p class="aviso">✔ Pago recibido · Folio: CC-000123 · Total: $650 MXN</p>
+                <a href="MisBoletos.html" class="boton">Ver mis boletos</a>
+            </div>
+        </div>
+    </main>
+    <footer class="pie">
+        <div class="contenedor pie-contenido">
+            <p class="pie-logo">COLISEO<span>CENTENARIO</span></p>
+            <nav class="pie-enlaces">
+            <a href="index.html">Inicio</a>
+            <a href="cartelera.html">Cartelera</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="pagos.html">Pagos</a>
+            <a href="MisBoletos.html">Mis boletos</a>
+        </nav>
+        </div>
+        <p class="pie-copy">© 2026 Coliseo Centenario. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
