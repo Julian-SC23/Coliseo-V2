@@ -674,3 +674,53 @@ a {
 .paypal-mini {
     height: 28px;
 }
+
+/* ===== Sistema del administrador ===== */
+.tarjetas-datos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.dato {
+    background: var(--tarjeta);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.dato-numero {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.dato-texto {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--tarjeta);
+}
+
+.tabla th,
+.tabla td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--borde);
+    text-align: left;
+    font-size: 0.92rem;
+    white-space: nowrap;
+}
+
+.tabla th {
+    background: var(--fondo-2);
+    color: var(--texto-suave);
+}
+
+.campo-corto {
+    width: 110px;
+    padding: 6px 8px;
+}
