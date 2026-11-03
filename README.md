@@ -9,3 +9,12 @@ Sistema web de venta de boletos (cliente y administrador) con PHP, MySQL y PayPa
 4. Abre `http://localhost/NOMBRE-CARPETA/Web/index.php`.
 
 Administrador de prueba: `admin@coliseo.com` / `admin1234`
+
+==== SOLUCION DE ERRORES ====
+- si en mysql para xapm tien un pueto diferente del 3307 y la pagina no corre agrege lo siguiente:
+en el archivo 
+config.local.php agregar:
+define('DB_PORT', 3307); 
+
+y en la line 15 del conexion.php remplazar por:
+new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, defined('DB_PORT') ? DB_PORT : 3306);
